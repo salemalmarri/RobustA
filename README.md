@@ -31,4 +31,17 @@ Below are direct Dropbox download links for each corruption and model.
 
 ---
 
+## To download RobustA VGGISH
+
+- **Babble:** [Download](https://www.dropbox.com/scl/fo/inqyoa68a01j2yenwbmrt/ALKzSJ7S9HHb81--tQAx9jk?rlkey=d32kk0wiiaegk8x6zuhnbetg4&st=n7ylwndw&dl=0)
+- **Bitrate:** [Download](https://www.dropbox.com/scl/fo/cm3dlhu7lan8zk6jl46gl/AIrFPTPJBCZ8VYbJJT5HqkI?rlkey=cqeb8flypj1f5g8sttvtrj4h7&st=4iwlhahn&dl=0)
+- **HFChannel:** [Download](https://www.dropbox.com/scl/fo/gaft2eo66dewy4rgk6d2c/AGlS6Oksjig5TtjC84QKHx8?rlkey=amjetu6s8t298z35abh5gjpun&st=da7xlrhm&dl=0)
+- **Pink:** [Download](https://www.dropbox.com/scl/fo/5ijmoyv8m5zz2vboibysd/AAuFtWFJvkFKR8Zl1KGdKlQ?rlkey=xir2tz173il4eatduvg16bwym&st=mlpw7td5&dl=0)
+- **Pitch Shift:** [Download](https://www.dropbox.com/scl/fo/b95ji6qilatwzlz07w9gu/AFRGdNMFSUTlP-tfSWdj2eQ?rlkey=cep2nedhxam0xyn94dhiux954&st=m84e8hfg&dl=0)
+- **Random Dropout:** [Download](https://www.dropbox.com/scl/fo/rjefn17uilb049n5tq2vh/APZBNF-rH8hdG1CKrBPajb0?rlkey=0w5apn1rgevb71qriouljgogq&st=pcn7q5go&dl=0)
+- **Reverb:** [Download](https://www.dropbox.com/scl/fo/ugsvoojjx47bkkv1ey7d8/ABZsHXR0QfnLmNAmOCv--dc?rlkey=vtzzpf0lkgj91jdx8fwk4xreu&st=q5di2lbw&dl=0)
+- **White:** [Download](https://www.dropbox.com/scl/fo/lvhj8i8sxobt5arhql7eh/AMHziHedD9vqIzLjmIWFjm0?rlkey=7nk3a7t4c3mzi0slyetwduyrm&st=26uaymyx&dl=0)
+
+---
+
 If you need additional modalities (audio, etc.) or want to add train/test set separation, let me know!
