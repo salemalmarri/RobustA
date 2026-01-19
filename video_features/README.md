@@ -9,7 +9,7 @@ Download **NoiseX-92** from the link below:
 - NoiseX-92:  
   https://www.dropbox.com/scl/fo/tn8prgq4zlw830u8tpqdu/AIrWOY326HNpFDKwXPt_sFM?rlkey=cy1ds9u3hp5k0z4bsjdym083k&dl=0
 
-After downloading, extract the contents and place the folder in the project root directory.
+After downloading, extract the contents and place the folder at `video_features/NoiseX-92`.
 
 ### 2. Pretrained Models Folder
 
@@ -18,7 +18,7 @@ Download the **models** folder from the link below:
 - Models folder:  
   https://www.dropbox.com/scl/fo/28igwa06aif0fnsbyqhe4/APSO91eCkvbieg1zciZKPgw?rlkey=6mqz1kddm5af4ooecjgp2v2ck&dl=0
 
-After downloading, extract and place the `models/` directory in the project root.
+After downloading, extract and place the folder at `video_features/models`.
 
 ---
 
