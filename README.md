@@ -2,6 +2,11 @@
 
 Official repository for **RobustA: Robust Anomaly Detection in Multimodal Data**, a comprehensive benchmark for evaluating anomaly detection robustness across multimodal data with various corruption types. This repository includes corrupted video datasets, pre-extracted features, and tools for feature extraction and corruption generation. For more details, refer to the paper: https://arxiv.org/abs/2511.07276
 
+<div align="center">
+<img src="doc/medras-noborder.png" width="400" alt="RobustA Framework">
+<p><em>Examples of few visual and audio corruptions demonstrating the challenging scenarios presented in RobustA.</em></p>
+</div>
+
 ## Table of Contents
 - [RobustA Benchmark](#robusta-benchmark)
   - [RobustA MP4 Files](#robusta-mp4-files)
