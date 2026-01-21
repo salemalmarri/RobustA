@@ -1,11 +1,23 @@
 # RobustA: Robust Anomaly Detection in Multimodal Data
 
-Official repository for **RobustA: Robust Anomaly Detection in Multimodal Data**, a comprehensive benchmark for evaluating anomaly detection robustness across multimodal data with various corruption types. This repository includes corrupted video datasets, pre-extracted features, and tools for feature extraction and corruption generation. For more details, refer to the paper: https://arxiv.org/abs/2511.07276
+[Salem AlMarri](https://scholar.google.com/citations?user=Do6-P9EAAAAJ&hl=en&oi=ao/), [Muhammad Imran Liaqat](https://scholar.google.com/citations?user=JX3rzZ8AAAAJ&hl=en&oi=ao), [Muhammad Zaigham Zaheer](https://scholar.google.com/citations?user=nFxWrXEAAAAJ&hl=en&oi=ao), [Shah Nawaz](https://scholar.google.com/citations?user=gHQwe2wAAAAJ&hl=en&oi=ao), [Karthik Nandakumar](https://scholar.google.com/citations?user=2qx0RnEAAAAJ&hl=en&oi=ao), [Markus Schedl](https://scholar.google.com/citations?user=TQR8qIEAAAAJ&hl=en&oi=ao)
+<br>
+
+> **Abstract:** In recent years, multimodal anomaly detection methods have demonstrated remarkable performance improvements over video-only models. However, real-world multimodal data is often corrupted due to unforeseen environmental distortions. In this paper, we present the first-of-its-kind work that comprehensively investigates the adverse effects of corrupted modalities on multimodal anomaly detection task. To streamline this work, we propose RobustA, a carefully curated evaluation dataset to systematically observe the impacts of audio and visual corruptions on the overall effectiveness of anomaly detection systems. Furthermore, we propose a multimodal anomaly detection method, which shows notable resilience against corrupted modalities. The proposed method learns a shared representation space for different modalities and employs a dynamic weighting scheme during inference based on the estimated level of corruption. Our work represents a significant step forward in enabling the real-world application of multimodal anomaly detection, addressing situations where the likely events of modality corruptions occur. The proposed evaluation dataset with corrupted modalities and respective extracted features will be made publicly available.
+
+<div align="center">
+
+[![Paper](https://img.shields.io/badge/paper-arxiv.2511.07276-B31B1B.svg)](https://arxiv.org/abs/2511.07276)
+
+</div>
+
 
 <div align="center">
 <img src="doc/medras-noborder.png" width="700" alt="RobustA Framework">
 <p><em>Examples of few visual and audio corruptions demonstrating the challenging scenarios presented in RobustA.</em></p>
 </div>
+
+
 
 ## Table of Contents
 - [RobustA Benchmark](#robusta-benchmark)
