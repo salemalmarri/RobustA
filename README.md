@@ -211,7 +211,7 @@ Repeat with `../XD-Violence-Corrupted-5` for severity 5.
 
 ### Quick Start (VGGish Feature Extraction + Audio Corruptions)
 
-Extract VGGish features with RobustA audio corruptions:
+Use `video_features/main.py` for both clean and corrupted VGGish extraction.
 
 ```bash
 cd video_features
@@ -220,11 +220,29 @@ cd video_features
 # 1) Download NoiseX-92 into ./NoiseX-92
 # 2) Download RobustA models folder into ./models
 
-# Run all corruption families at severity 3
+# Clean VGGish
+python main.py \
+  feature_type=vggish \
+  device="cpu" \
+  file_with_video_paths="XD_Violence_testing.txt" \
+  output_path="./output_clean/vggish" \
+  on_extraction="save_numpy"
+
+# Corrupted VGGish (template for non-overlay corruptions)
+python main.py \
+  feature_type=vggish \
+  device="cpu" \
+  file_with_video_paths="XD_Violence_testing.txt" \
+  output_path="./output_corrupted/<CORRUPTION_NAME>_<SEVERITY>" \
+  on_extraction="save_numpy" \
+  audio_corruption_type="<CORRUPTION_NAME>" \
+  audio_severity=<SEVERITY>
+
+# Batch corruption extraction using script
 bash run_ALL.sh
 ```
 
-`run_ALL.sh` includes overlay corruptions (`white`, `pink`, `hfchannel`, `babble`) and non-overlay corruptions (`bitrate`, `pitch_shift`, `reverb`, `random_dropout`).
+For overlay corruptions (`white`, `pink`, `hfchannel`, `babble`), use `audio_corruption_type="overlay"` with `overlay_audio_type="<OVERLAY_NAME>"`. The module README provides full templates.
 
 ### Paper-to-Code Naming Map
 

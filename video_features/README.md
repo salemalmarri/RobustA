@@ -1,19 +1,84 @@
 ## RobustA Quick Start (VGGish + Audio Corruptions)
 
-This folder is used in the RobustA pipeline to extract audio (VGGish) features under corruption.
+This folder supports both:
+
+- clean VGGish extraction
+- corrupted VGGish extraction (RobustA corruption protocol)
 
 ```bash
 cd video_features
+```
 
-# One-time setup:
-# 1) Download NoiseX-92 and place it at ./NoiseX-92
-# 2) Download RobustA models folder and place it at ./models
+One-time setup:
 
-# Run severity-3 extraction for all RobustA audio corruption types
+1. Download NoiseX-92 and place it at `./NoiseX-92`
+2. Download RobustA models folder and place it at `./models`
+
+### A) Clean VGGish extraction
+
+Use this when you want clean (non-corrupted) VGGish features:
+
+```bash
+python main.py \
+  feature_type=vggish \
+  device="cpu" \
+  file_with_video_paths="XD_Violence_testing.txt" \
+  output_path="./output_clean/vggish" \
+  on_extraction="save_numpy"
+```
+
+### B) Corrupted VGGish extraction (single corruption command template)
+
+Use this template for one corruption at a time:
+
+```bash
+# Non-overlay corruption template:
+python main.py \
+  feature_type=vggish \
+  device="cpu" \
+  file_with_video_paths="XD_Violence_testing.txt" \
+  output_path="./output_corrupted/<CORRUPTION_NAME>_<SEVERITY>" \
+  on_extraction="save_numpy" \
+  audio_corruption_type="<CORRUPTION_NAME>" \
+  audio_severity=<SEVERITY>
+```
+
+Example:
+
+```bash
+python main.py \
+  feature_type=vggish \
+  device="cpu" \
+  file_with_video_paths="XD_Violence_testing.txt" \
+  output_path="./output_corrupted/reverb_3" \
+  on_extraction="save_numpy" \
+  audio_corruption_type="reverb" \
+  audio_severity=3
+```
+
+Overlay template (`white`, `pink`, `hfchannel`, `babble`):
+
+```bash
+python main.py \
+  feature_type=vggish \
+  device="cpu" \
+  file_with_video_paths="XD_Violence_testing.txt" \
+  output_path="./output_corrupted/<OVERLAY_NAME>_<SEVERITY>" \
+  on_extraction="save_numpy" \
+  audio_corruption_type="overlay" \
+  overlay_audio_type="<OVERLAY_NAME>" \
+  audio_severity=<SEVERITY>
+```
+
+### C) Batch corrupted extraction with `.sh`
+
+Use `run_ALL.sh` to run all configured corruption commands in batch:
+
+```bash
 bash run_ALL.sh
 ```
 
-The default `run_ALL.sh` commands generate:
+The default script covers:
 
 - Overlay family: `white`, `pink`, `hfchannel`, `babble`
 - Other corruptions: `bitrate`, `pitch_shift`, `reverb`, `random_dropout`
