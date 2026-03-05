@@ -42,14 +42,6 @@
       <p><strong>Rain</strong></p>
     </td>
   </tr>
-  <tr>
-    <td style="border: none; padding: 10px;">
-    </td>
-    <td style="border: none; padding: 10px;">
-    </td>
-    <td style="border: none; padding: 10px;">
-    </td>
-  </tr>
 </table>
 <p><em>Examples of visual and audio corruptions demonstrating the challenging scenarios presented in RobustA.</em></p>
 </div>
