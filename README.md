@@ -288,3 +288,16 @@ If you find this project useful in your research, please consider citing:
   year = {2025}
 }
 ```
+
+### Supplementary Citations (Upstream Components)
+
+The following works/tools are used or adapted in parts of this repository and should be cited separately when relevant to your usage:
+
+- **XD-Violence dataset / baseline context**  
+  [Wu et al., 2020 - Not only Look, but also Listen](https://arxiv.org/abs/2008.02521)
+- **Video corruption benchmark components**  
+  [Yi et al., 2021 - Benchmarking the Robustness of Spatial-Temporal Models Against Corruptions](https://arxiv.org/abs/2110.06513)
+- **Audio/feature extraction framework base**  
+  [v-iashin/video_features](https://github.com/v-iashin/video_features)
+- **I3D feature extraction base components**  
+  [pytorch-resnet3d](https://github.com/Tushar-N/pytorch-resnet3d), [pytorch-i3d-feature-extraction](https://github.com/Finspire13/pytorch-i3d-feature-extraction)
