@@ -1,3 +1,31 @@
+## RobustA Quick Start (VGGish + Audio Corruptions)
+
+This folder is used in the RobustA pipeline to extract audio (VGGish) features under corruption.
+
+```bash
+cd video_features
+
+# One-time setup:
+# 1) Download NoiseX-92 and place it at ./NoiseX-92
+# 2) Download RobustA models folder and place it at ./models
+
+# Run severity-3 extraction for all RobustA audio corruption types
+bash run_ALL.sh
+```
+
+The default `run_ALL.sh` commands generate:
+
+- Overlay family: `white`, `pink`, `hfchannel`, `babble`
+- Other corruptions: `bitrate`, `pitch_shift`, `reverb`, `random_dropout`
+
+### Paper-to-Code Naming (Audio)
+
+- **Overlay** (paper umbrella term) -> `white`, `pink`, `hfchannel`, `babble`
+- **Bit Error / compression-style corruption** -> `bitrate`
+- **Pitch Shift** -> `pitch_shift`
+- **Random Dropout** -> `random_dropout`
+- **Reverb** -> `reverb`
+
 ## Required Downloads
 
 Before using this repository, please download the following resources and place them in the appropriate locations.

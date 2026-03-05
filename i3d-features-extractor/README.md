@@ -1,41 +1,48 @@
-# I3D_Feature_Extraction_resnet
-This repo contains code to extract I3D features with resnet50 backbone given a folder of videos
+# I3D Feature Extraction (RobustA)
 
-This code can be used for the below paper. Use at your own risk since this is still untested.
-* [Weakly-supervised Video Anomaly Detection with Robust Temporal Feature Magnitude Learning](https://arxiv.org/pdf/2101.10030.pdf)
+This module extracts ResNet-I3D visual features from MP4 videos for the RobustA pipeline.
 
----
+For each input video, it saves one `.npy` file (video-level temporal feature sequence).
+
+## Quick Start
+
+```bash
+cd i3d-features-extractor
+
+# 1) Download I3D pretrained weights (Caffe2 format)
+wget https://dl.fbaipublicfiles.com/video-nonlocal/i3d_baseline_32x2_IN_pretrain_400k.pkl -P pretrained/
+
+# 2) Convert to PyTorch checkpoint used by this code
+python -m utils.convert_weights \
+  pretrained/i3d_baseline_32x2_IN_pretrain_400k.pkl \
+  pretrained/i3d_r50_kinetics.pth
+
+# 3) Extract features
+python main.py \
+  --datasetpath ../XD-Violence-Corrupted-3 \
+  --outputpath ../I3D-Corrupted-Features-Fixed-3 \
+  --pretrainedpath pretrained/i3d_r50_kinetics.pth
+```
+
+Run the same command with `../XD-Violence-Corrupted-5` to extract severity-5 features.
+
+## Arguments
+
+- `--datasetpath`: input root folder (recursive search for `.mp4`)
+- `--outputpath`: output folder for extracted `.npy` features
+- `--pretrainedpath`: path to converted I3D checkpoint
+- `--frequency`: frame stride between snippets (default: `16`)
+- `--batch_size`: snippet batch size (default: `20`)
+- `--sample_mode`: snippet sampling mode (default: `oversample`)
+
+## Notes
+
+- `ffmpeg` must be available in your environment (used to decode video frames).
+- Existing output files are skipped automatically.
 
 ## Credits
-The main resnet code and others is collected from the following repositories. 
-* [pytorch-resnet3d](https://github.com/Tushar-N/pytorch-resnet3d)
-* [pytorch-i3d-feature-extraction](https://github.com/Finspire13/pytorch-i3d-feature-extraction)
 
-I modified and combined them and also added features to make it suitable for the given task.
+Base components are adapted from:
 
-## Overview
-This code takes a folder of videos as input and for each video it saves ```I3D``` feature numpy file of dimension ```1*n/16*2048``` where n is the no.of frames in the video
-
-## Usage
-### Setup
-Download pretrained weights for I3D from the nonlocal repo
-```bash
-wget https://dl.fbaipublicfiles.com/video-nonlocal/i3d_baseline_32x2_IN_pretrain_400k.pkl -P pretrained/
-```
-Convert these weights from caffe2 to pytorch. This is just a simple renaming of the blobs to match the pytorch model.
-```bash
-python -m utils.convert_weights pretrained/i3d_baseline_32x2_IN_pretrain_400k.pkl pretrained/i3d_r50_kinetics.pth
-```
-
-### Parameters
-<pre>
---datasetpath:       folder of input videos (contains videos or subdirectories of videos)
---outputpath:        folder of extracted features
---frequency:         how many frames between adjacent snippet
---batch_size:        batch size for snippets
-</pre>
-
-### Run
-```bash
-python main.py --datasetpath=samplevideos/ --outputpath=output
-```
+- [pytorch-resnet3d](https://github.com/Tushar-N/pytorch-resnet3d)
+- [pytorch-i3d-feature-extraction](https://github.com/Finspire13/pytorch-i3d-feature-extraction)

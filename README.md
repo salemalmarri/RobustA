@@ -27,9 +27,13 @@
   - [RobustA I3D Features](#robusta-i3d-features)
   - [RobustA VGGISH Features](#robusta-vggish-features)
 - [Corruption Generation (Our Contribution)](#corruption-generation-our-contribution)
+  - [Quick Start (Visual Corruption Generation)](#quick-start-visual-corruption-generation)
   - [Visual Corruptions](#visual-corruptions-video-corruption)
   - [Audio Corruptions](#audio-corruptions-video_features)
 - [Feature Extraction](#feature-extraction)
+  - [Quick Start (I3D Feature Extraction)](#quick-start-i3d-feature-extraction)
+  - [Quick Start (VGGish Feature Extraction + Audio Corruptions)](#quick-start-vggish-feature-extraction--audio-corruptions)
+  - [Paper-to-Code Naming Map](#paper-to-code-naming-map)
   - [I3D Feature Extraction](#i3d-feature-extraction)
   - [VGGish Feature Extraction](#vggish-feature-extraction-with-audio-corruption)
 - [Citation](#citation)
@@ -119,6 +123,26 @@ This benchmark provides datasets for evaluating anomaly detection robustness acr
 
 A key contribution of RobustA is the systematic creation of **visual and audio corruptions** applied to the XD-Violence dataset. We adapted and extended existing corruption toolkits to produce the RobustA benchmark.
 
+### Quick Start (Visual Corruption Generation)
+
+Generate corrupted MP4 files at severity 3 and 5:
+
+```bash
+cd video-corruption
+pip install -r requirements.txt
+
+# Edit paths in the script first:
+# input_folder  = "../XD-Violence"
+# output_folder = "../XD-Violence-Corrupted-3"
+python corruptAllV2-3.py
+
+# Edit output_folder to "../XD-Violence-Corrupted-5" (already set in V2-5)
+python corruptAllV2-5.py
+```
+
+By default, scripts generate:
+`shot_noise`, `rain`, `contrast`, `brightness`, `saturate`, `motion_blur`, `fog`, and `bit_error`.
+
 ### Visual Corruptions (`video-corruption/`)
 
 We apply **8 visual corruption types** at multiple severity levels directly to XD-Violence MP4 videos:
@@ -162,6 +186,68 @@ See [`video_features/`](video_features) for the full code and download links for
 ---
 
 ## Feature Extraction
+
+### Quick Start (I3D Feature Extraction)
+
+Extract I3D features from clean/corrupted MP4 videos:
+
+```bash
+cd i3d-features-extractor
+
+# Install dependencies in your environment
+# (PyTorch + torchvision + ffmpeg-python + numpy)
+
+# Download and convert pretrained weights
+wget https://dl.fbaipublicfiles.com/video-nonlocal/i3d_baseline_32x2_IN_pretrain_400k.pkl -P pretrained/
+python -m utils.convert_weights pretrained/i3d_baseline_32x2_IN_pretrain_400k.pkl pretrained/i3d_r50_kinetics.pth
+
+# Run extraction
+python main.py \
+  --datasetpath ../XD-Violence-Corrupted-3 \
+  --outputpath ../I3D-Corrupted-Features-Fixed-3
+```
+
+Repeat with `../XD-Violence-Corrupted-5` for severity 5.
+
+### Quick Start (VGGish Feature Extraction + Audio Corruptions)
+
+Extract VGGish features with RobustA audio corruptions:
+
+```bash
+cd video_features
+
+# One-time setup:
+# 1) Download NoiseX-92 into ./NoiseX-92
+# 2) Download RobustA models folder into ./models
+
+# Run all corruption families at severity 3
+bash run_ALL.sh
+```
+
+`run_ALL.sh` includes overlay corruptions (`white`, `pink`, `hfchannel`, `babble`) and non-overlay corruptions (`bitrate`, `pitch_shift`, `reverb`, `random_dropout`).
+
+### Paper-to-Code Naming Map
+
+To keep wording consistent with the paper while preserving repository file names:
+
+#### Visual modality
+
+- **Bit Error** -> `bit_error`
+- **Brightness** -> `brightness`
+- **Contrast** -> `contrast`
+- **Fog** -> `fog`
+- **Rain** -> `rain`
+- **Motion Blur** -> `motion_blur`
+- **Saturation** (paper wording) -> `saturate` (code/list naming)
+- **Shot Noise** -> `shot_noise`
+
+#### Audio modality
+
+- **Overlay** (paper umbrella term) -> `white`, `pink`, `hfchannel`, `babble`
+- **Bit Error / compression-style corruption** -> `bitrate`
+- **Pitch Shift** -> `pitch_shift`
+- **Random Dropout** -> `random_dropout`
+- **Reverb** -> `reverb`
 
 ### I3D Feature Extraction
 
