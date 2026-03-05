@@ -13,8 +13,45 @@
 
 
 <div align="center">
-<img src="doc/medras-noborder.png" width="700" alt="RobustA Framework">
-<p><em>Examples of few visual and audio corruptions demonstrating the challenging scenarios presented in RobustA.</em></p>
+<table style="border-collapse: collapse; border: none; margin: 20px auto;">
+  <tr>
+    <td style="border: none; padding: 10px;">
+      <img src="doc/brightness_{Young.And.Dangerous.I.1996__ 0-46-57_0-48-57_label_B1-0-0.gif" width="200" alt="Brightness Corruption">
+      <p><strong>Brightness</strong></p>
+    </td>
+    <td style="border: none; padding: 10px;">
+      <img src="doc/fog_v=AF9p0YA0hyA__ 00-03-03_00-04-20_label_B4-0-0.gif" width="200" alt="Fog Corruption">
+      <p><strong>Fog</strong></p>
+    </td>
+      <td style="border: none; padding: 10px;">
+      <img src="doc/contrast_v=3lSHv_DUbJs__ 1_label_A.gif" width="200" alt="Contrast Corruption">
+      <p><strong>Contrast</strong></p>
+    </td>
+  </tr>
+  <tr>
+      <td style="border: none; padding: 10px;">
+      <img src="doc/motion_blur_Black.Hawk.Down.2001__ 02-00-12_02-01-29_label_B2-0-0.gif" width="200" alt="Motion Blur Corruption">
+      <p><strong>Motion Blur</strong></p>
+    </td>
+    <td style="border: none; padding: 10px;">
+      <img src="doc/bit_error_Operation.Red.Sea.2018__ 0-56-26_0-57-10_label_G-0-0.gif" width="200" alt="Bit Error Corruption">
+      <p><strong>Bit Error</strong></p>
+    </td>
+    <td style="border: none; padding: 10px;">
+      <img src="doc/rain_Black.Hawk.Down.2001__ 01-13-59_01-14-49_label_B2-0-0.gif" width="200" alt="Rain Corruption">
+      <p><strong>Rain</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td style="border: none; padding: 10px;">
+    </td>
+    <td style="border: none; padding: 10px;">
+    </td>
+    <td style="border: none; padding: 10px;">
+    </td>
+  </tr>
+</table>
+<p><em>Examples of visual and audio corruptions demonstrating the challenging scenarios presented in RobustA.</em></p>
 </div>
 
 
