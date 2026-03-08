@@ -16,8 +16,8 @@
 <table style="border-collapse: collapse; border: none; margin: 20px auto;">
   <tr>
     <td style="border: none; padding: 10px;">
-      <img src="doc/brightness_{Young.And.Dangerous.I.1996__ 0-46-57_0-48-57_label_B1-0-0.gif" width="200" alt="Brightness Corruption">
-      <p><strong>Brightness</strong></p>
+      <img src="doc/normal_car2.gif" width="200" alt="Normal">
+      <p><strong>Normal</strong></p>
     </td>
     <td style="border: none; padding: 10px;">
       <img src="doc/fog_v=AF9p0YA0hyA__ 00-03-03_00-04-20_label_B4-0-0.gif" width="200" alt="Fog Corruption">
@@ -42,8 +42,20 @@
       <p><strong>Rain</strong></p>
     </td>
   </tr>
+  <tr>
+    <td style="border: none; padding: 10px;">
+      <img src="doc/brightness_{Young.And.Dangerous.I.1996__ 0-46-57_0-48-57_label_B1-0-0.gif" width="200" alt="Brightness Corruption">
+      <p><strong>Brightness</strong></p>
+    </td>
+    <td style="border: none; padding: 10px;">
+      <img src="doc/shot_noise_v=HUL83wCQATc__ 1_label_B1-0-0.gif" width="200" alt="Shot Noise Corruption">
+      <p><strong>Shot Noise</strong></p>
+    </td>
+    <td style="border: none; padding: 10px;">
+    </td>
+  </tr>
 </table>
-<p><em>Examples of visual and audio corruptions demonstrating the challenging scenarios presented in RobustA.</em></p>
+<p><em>Examples of visual corruptions demonstrating the challenging scenarios presented in RobustA.</em></p>
 </div>
 
 
