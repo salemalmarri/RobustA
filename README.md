@@ -13,6 +13,21 @@
 
 
 <div align="center">
+<img src="doc/robusta_corruptions_v1.gif" width="700" alt="RobustA corruption preview v1">
+<p><em>GIF candidate v1 (OOM-safe): one sample clip per available visual corruption. Shot Noise video is not available in the current MP4 folder and is shown as a placeholder tile.</em></p>
+
+<img src="doc/robusta_corruptions_v2.gif" width="700" alt="RobustA corruption preview v2">
+<p><em>GIF candidate v2.</em></p>
+
+<img src="doc/robusta_corruptions_v3.gif" width="700" alt="RobustA corruption preview v3">
+<p><em>GIF candidate v3.</em></p>
+
+<img src="doc/robusta_corruptions_v4.gif" width="700" alt="RobustA corruption preview v4">
+<p><em>GIF candidate v4.</em></p>
+
+<img src="doc/robusta_corruptions_v5.gif" width="700" alt="RobustA corruption preview v5">
+<p><em>GIF candidate v5.</em></p>
+
 <img src="doc/medras-noborder.png" width="700" alt="RobustA Framework">
 <p><em>Examples of few visual and audio corruptions demonstrating the challenging scenarios presented in RobustA.</em></p>
 </div>
@@ -89,7 +104,7 @@ This benchmark provides datasets for evaluating anomaly detection robustness acr
 - **Fog:** [Download](https://www.dropbox.com/scl/fo/djmvu8cnhv9136dbjz3b7/AN3dAfPcGgmBwSTMaKkxl1Q?rlkey=sxj6haqykztkuvsj23nh31e08&st=s1ohh947&dl=0)
 - **Motion Blur:** [Download](https://www.dropbox.com/scl/fo/p13jzhy6oua1bt7ro822n/ANT1iVrj1nvToohoP7sBdIE?rlkey=ijk3b4ayqmu119ibcbgwqpkkl&st=yeosywen&dl=0)
 - **Rain:** [Download](https://www.dropbox.com/scl/fo/pzsju2adhxsgxxx4lml3k/AOIXlQrpFkjjfN9oxgp2kO4?rlkey=868znff3m1ztuad2cquuqjv4o&st=iddtfr0e&dl=0)
-- **Saturate:** [Download](https://www.dropbox.com/scl/fo/pzsju2adhxsgxxx4lml3k/AOIXlQrpFkjjfN9oxgp2kO4?rlkey=868znff3m1ztuad2cquuqjv4o&st=iddtfr0e&dl=0)
+- **Saturate:** [Download](https://www.dropbox.com/scl/fo/7zxjblh0eurqtax7wcdoy/AFizGayu8m08BJkOcGAGiGc?rlkey=rf4cksn3lib3bl9zn7yqn76q4&st=83lh80ll&dl=0)
 - **Shot Noise:** [Download](https://www.dropbox.com/scl/fo/f2ir2w72qdb5qgeamvmax/AOiXJWjuuZ81uN75oE4zBvw?rlkey=gwjg4h2q5j8zf5luj1p30qz7h&st=ve31o2sz&dl=0)
 
 ---
