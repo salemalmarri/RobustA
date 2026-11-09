@@ -13,20 +13,8 @@
 
 
 <div align="center">
-<img src="doc/robusta_corruptions_v1.gif" width="700" alt="RobustA corruption preview v1">
-<p><em>GIF candidate v1 (OOM-safe): one sample clip per available visual corruption. Shot Noise video is not available in the current MP4 folder and is shown as a placeholder tile.</em></p>
-
-<img src="doc/robusta_corruptions_v2.gif" width="700" alt="RobustA corruption preview v2">
-<p><em>GIF candidate v2.</em></p>
-
-<img src="doc/robusta_corruptions_v3.gif" width="700" alt="RobustA corruption preview v3">
-<p><em>GIF candidate v3.</em></p>
-
-<img src="doc/robusta_corruptions_v4.gif" width="700" alt="RobustA corruption preview v4">
-<p><em>GIF candidate v4.</em></p>
-
-<img src="doc/robusta_corruptions_v5.gif" width="700" alt="RobustA corruption preview v5">
-<p><em>GIF candidate v5.</em></p>
+<img src="doc/robusta_corruptions.gif" width="700" alt="RobustA visual corruption preview">
+<p><em>Preview of the visual corruptions in RobustA. Every tile is the same source clip, so differences between tiles are due to the corruption alone.</em></p>
 
 <img src="doc/medras-noborder.png" width="700" alt="RobustA Framework">
 <p><em>Examples of few visual and audio corruptions demonstrating the challenging scenarios presented in RobustA.</em></p>
